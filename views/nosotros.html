@@ -1,14 +1,14 @@
 <div class="nosotros-view">
     <style>
         /* ==========================================
-           ESTILOS DE LA VISTA NOSOTROS
+           NOSOTROS - DISEÑO OPTIMIZADO Y PROLIJO
            ========================================== */
         
         .nosotros-view {
             background: var(--color-bg);
         }
 
-        /* HERO NOSOTROS */
+        /* ========== HERO ========== */
         .nosotros-hero {
             position: relative;
             min-height: 85vh;
@@ -24,7 +24,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1920&h=1080&fit=crop');
+            background: url('images/nosotros/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             opacity: 0.15;
@@ -34,9 +34,9 @@
         .nosotros-hero-content {
             position: relative;
             z-index: 2;
+            text-align: center;
             max-width: 900px;
             padding: 2rem;
-            text-align: center;
         }
 
         .nosotros-hero h1 {
@@ -52,13 +52,13 @@
             line-height: 1.7;
         }
 
-        /* SECCIÓN CON IMAGEN */
+        /* ========== SECCIONES CON IMAGEN ========== */
         .section-with-image {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
-            padding: 6rem 2rem;
+            padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -72,307 +72,165 @@
         }
 
         .section-image {
+            position: relative;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            position: relative;
-        }
-
-        .section-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border: 3px solid var(--color-primary);
-            border-radius: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .section-with-image:hover .section-image::after {
-            opacity: 0.3;
         }
 
         .section-image img {
             width: 100%;
-            height: 400px;
+            height: 100%;
             object-fit: cover;
             display: block;
         }
 
         .section-text h2 {
             font-size: 2.5rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--color-dark);
             margin-bottom: 1.5rem;
         }
 
         .section-text p {
             font-size: 1.1rem;
+            color: var(--color-text);
             line-height: 1.8;
-            color: var(--color-text);
-            margin-bottom: 1.5rem;
-        }
-
-        /* CARDS GRID */
-        .cards-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.02) 0%, rgba(16, 185, 129, 0.02) 100%);
-        }
-
-        .cards-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-dark);
             margin-bottom: 1rem;
         }
 
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--color-text-light);
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        .section-text p strong {
+            color: var(--color-dark);
+            font-weight: 700;
         }
 
-        .value-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        .section-text ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .section-text ul li {
+            font-size: 1.05rem;
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
             position: relative;
-            overflow: hidden;
         }
 
-        .value-card::before {
-            content: '';
+        .section-text ul li::before {
+            content: '✓';
             position: absolute;
-            top: 0;
             left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            color: var(--color-secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);
-            border-color: var(--color-primary);
-        }
-
-        .value-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(16, 185, 129, 0.1));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--color-primary);
-            font-size: 2rem;
-        }
-
-        .value-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-dark);
-            margin-bottom: 1rem;
-        }
-
-        .value-card p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--color-text);
-        }
-
-        /* TIMELINE */
-        .timeline-section {
-            padding: 6rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border: 2px solid var(--color-border);
-            transition: all 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
-            border-color: var(--color-primary);
-        }
-
-        .timeline-year {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--color-dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .timeline-content p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--color-text);
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: var(--color-primary);
-            border: 4px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
-        }
-
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: var(--color-text-light);
-
-        /* STATS SECTION */
-        .stats-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stats-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 20px,
-                rgba(255, 255, 255, 0.03) 20px,
-                rgba(255, 255, 255, 0.03) 40px
-            );
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        /* RESPONSIVE */
+        /* Orden en móvil: Título → Imagen → Texto */
         @media (max-width: 968px) {
             .section-with-image {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                padding: 2.5rem 1.5rem;
+            }
+
+            /* Título siempre primero */
+            .section-text h2 {
+                order: 1;
+            }
+
+            /* Imagen segundo */
+            .section-image {
+                order: 2;
+            }
+
+            /* Contenido tercero */
+            .section-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .section-text p,
+            .section-text ul {
+                order: 3;
             }
 
             .section-with-image.reverse {
                 direction: ltr;
             }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                flex-direction: column !important;
-                align-items: flex-start;
-                padding-left: 50px;
-            }
-
-            .timeline-content {
-                width: 100%;
-            }
-
-            .timeline-marker {
-                left: 20px;
-            }
-
-            .nosotros-hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .stat-number {
-                font-size: 3rem;
-            }
         }
 
-        @media (max-width: 768px) {
+        /* ========== VALORES ========== */
+        .values-section {
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.02), rgba(16, 185, 129, 0.02));
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem 1.75rem;
+            border-radius: 16px;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .value-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ========== RESPONSIVE ADICIONAL ========== */
+        @media (max-width: 968px) {
             .nosotros-hero h1 {
                 font-size: 2.5rem;
             }
@@ -385,8 +243,55 @@
                 font-size: 2rem;
             }
 
+            .section-text p {
+                font-size: 1rem;
+            }
+
+            .values-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .section-header h2 {
                 font-size: 2rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nosotros-hero h1 {
+                font-size: 2rem;
+            }
+
+            .nosotros-hero p {
+                font-size: 1rem;
+            }
+
+            .section-with-image {
+                padding: 2rem 1.25rem;
+            }
+
+            .section-text h2 {
+                font-size: 1.75rem;
+            }
+
+            .values-section {
+                padding: 2rem 1.25rem;
+            }
+
+            .value-card {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
             }
         }
     </style>
@@ -394,85 +299,92 @@
     <!-- HERO -->
     <section class="nosotros-hero">
         <div class="nosotros-hero-content">
-            <h1 data-translate="about_hero_title"></h1>
-            <p data-translate="about_hero_subtitle"></p>
+            <h1 data-translate="about_hero_title">Sobre Nosotros</h1>
+            <p data-translate="about_hero_subtitle">Innovación en nanofertilizantes quelatados para una agricultura más sostenible</p>
         </div>
     </section>
 
     <!-- QUIÉNES SOMOS -->
     <section class="section-with-image">
         <div class="section-image">
-            <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&h=600&fit=crop" alt="Laboratorio Ecozeo">
+            <img src="images/nosotros/quienes-somos.jpg" alt="Laboratorio Ecozeo - Investigación científica">
         </div>
         <div class="section-text">
-            <h2 data-translate="about_whoweare_title"></h2>
-            <p data-translate="about_whoweare_p1"></p>
-            <p data-translate="about_whoweare_p2"></p>
-            <p data-translate="about_whoweare_p3"></p>
+            <h2 data-translate="about_whoweare_title">¿Quiénes Somos?</h2>
+            <p data-translate="about_whoweare_p1">Somos una empresa encargada de desarrollar, producir, comercializar y distribuir nanofertilizantes formulados a base de zeolita clinoptilolita modificada con macro y micro nutrientes quelatados.</p>
+            <p data-translate="about_whoweare_p2">Logramos servicios de excelencia en la importación y exportación de insumos y productos relacionados con fertilizantes, minerales y tecnologías agrícolas.</p>
+            <p data-translate="about_whoweare_p3">Hemos establecido en Las Vegas, NV una planta de producción de nanofertilizantes, donde gestionamos procesos de manufactura, empaque y distribución.</p>
         </div>
     </section>
 
-    <!-- MISIÓN Y VISIÓN -->
+    <!-- MISIÓN -->
     <section class="section-with-image reverse">
         <div class="section-image">
-            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&h=600&fit=crop" alt="Agricultura sostenible">
+            <img src="images/nosotros/mision.jpg" alt="Misión Ecozeo - Agricultura sostenible">
         </div>
         <div class="section-text">
-            <h2 data-translate="about_mission_title"></h2>
-            <p data-translate="about_mission_text"><strong>Misión:</strong> Mejorar la eficiencia en la absorción de nutrientes por las plantas, reducir el impacto ambiental de la agricultura convencional y promover prácticas agrícolas sostenibles, logrando servicios de excelencia en la importación y exportación de insumos y productos relacionados con fertilizantes, minerales y tecnologías agrícolas.</p>
-            <p data-translate="about_vision_text"><strong>Visión:</strong></p>
-            <ul style="line-height: 1.8; color: var(--color-text); font-size: 1.05rem; list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 1rem;" data-translate="vision_item1"></li>
-                <li style="margin-bottom: 1rem;" data-translate="vision_item2"></li>
-                <li data-translate="vision_item3"></li>
+            <h2 data-translate="about_mission_title">Misión</h2>
+            <p data-translate="about_mission_text">Mejorar la eficiencia en la absorción de nutrientes por las plantas, reducir el impacto ambiental de la agricultura convencional y promover prácticas agrícolas sostenibles, logrando servicios de excelencia en la importación y exportación de insumos y productos relacionados con fertilizantes, minerales y tecnologías agrícolas.</p>
+        </div>
+    </section>
+
+    <!-- VISIÓN -->
+    <section class="section-with-image">
+        <div class="section-image">
+            <img src="images/nosotros/vision.jpg" alt="Visión Ecozeo - Futuro agrícola">
+        </div>
+        <div class="section-text">
+            <h2 data-translate="about_vision_title">Visión</h2>
+            <ul>
+                <li data-translate="vision_item1">Investigar y desarrollar nanotecnologías de modificación de zeolitas para su aplicación en fertilizantes de liberación controlada. Realizando pruebas de campo y estudios de impacto agronómico y ambiental en cultivos diversos.</li>
+                <li data-translate="vision_item2">Establecer alianzas estratégicas con instituciones académicas, centros de investigación, cooperativas agrícolas y organismos gubernamentales.</li>
+                <li data-translate="vision_item3">Promover la educación y capacitación sobre el uso responsable y eficiente de nanofertilizantes quelatados en el sector agrícola, enfocados en la disminución de agroquímicos y ser amigables con el medio ambiente.</li>
             </ul>
         </div>
     </section>
 
-    <!-- VALORES -->
-    <section class="cards-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="about_values_title"></h2>
-                <p data-translate="about_values_subtitle"></p>
+    <!-- NUESTROS VALORES -->
+    <section class="values-section">
+        <div class="section-header">
+            <h2 data-translate="about_values_title">Nuestros Valores</h2>
+            <p data-translate="about_values_subtitle">Los principios que guían cada decisión y acción en Ecozeo</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-icon">🧪</span>
+                <h3 data-translate="value1_title">Nanofertilizantes Quelatados</h3>
+                <p data-translate="value1_text">Tecnología de quelación EDTA que garantiza hasta 5 veces mayor absorción de nutrientes, maximizando eficiencia nutricional y potenciando el crecimiento vegetal.</p>
             </div>
 
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🔬</div>
-                    <h3 data-translate="value1_title"></h3>
-                    <p data-translate="value1_text"></p>
-                </div>
+            <div class="value-card">
+                <span class="value-icon">🌋</span>
+                <h3 data-translate="value2_title">Encapsulación Volcánica</h3>
+                <p data-translate="value2_text">Sustrato de zeolita clinoptilolita de origen volcánico con estructura porosa única que protege nutrientes y permite liberación controlada según demanda de la planta.</p>
+            </div>
 
-                <div class="value-card">
-                    <div class="value-icon">🌱</div>
-                    <h3 data-translate="value2_title"></h3>
-                    <p data-translate="value2_text"></p>
-                </div>
+            <div class="value-card">
+                <span class="value-icon">⭐</span>
+                <h3 data-translate="value3_title">Nanotecnología + Naturaleza</h3>
+                <p data-translate="value3_text">La combinación perfecta de nanofertilizantes quelatados y zeolita volcánica crea una sinergia que multiplica la eficiencia y reduce pérdidas por lixiviación.</p>
+            </div>
 
-                <div class="value-card">
-                    <div class="value-icon">⭐</div>
-                    <h3 data-translate="value3_title"></h3>
-                    <p data-translate="value3_text"></p>
-                </div>
+            <div class="value-card">
+                <span class="value-icon">💧</span>
+                <h3 data-translate="value4_title">Liberación Inteligente</h3>
+                <p data-translate="value4_text">Sistema de entrega controlada que libera nutrientes progresivamente, evitando excesos, reduciendo frecuencia de aplicación y garantizando disponibilidad constante.</p>
+            </div>
 
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3 data-translate="value4_title"></h3>
-                    <p data-translate="value4_text"></p>
-                </div>
+            <div class="value-card">
+                <span class="value-icon">🌍</span>
+                <h3 data-translate="value5_title">Resultados Comprobados</h3>
+                <p data-translate="value5_text">Incremento verificable en rendimientos de cultivos, hasta 40% de reducción en uso de fertilizantes convencionales, y mejora significativa en salud y fertilidad del suelo.</p>
+            </div>
 
-                <div class="value-card">
-                    <div class="value-icon">🌍</div>
-                    <h3 data-translate="value5_title"></h3>
-                    <p data-translate="value5_text"></p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3 data-translate="value6_title"></h3>
-                    <p data-translate="value6_text"></p>
-                </div>
+            <div class="value-card">
+                <span class="value-icon">🔬</span>
+                <h3 data-translate="value6_title">Innovación Continua</h3>
+                <p data-translate="value6_text">Investigación constante en nanotecnología agrícola para desarrollar soluciones más eficientes, sostenibles y accesibles para agricultores de todo el mundo.</p>
             </div>
         </div>
     </section>
