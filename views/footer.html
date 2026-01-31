@@ -14,8 +14,8 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 2fr 1.5fr 1.5fr;
+            gap: 3rem;
             margin-bottom: 2rem;
         }
 
@@ -150,8 +150,12 @@
             }
 
             .footer-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+            }
+
+            .footer-section:first-child {
+                grid-column: 1 / -1;
             }
 
             .footer-section h3 {
@@ -248,13 +252,6 @@
                 <li><a href="#aplicaciones" data-translate="nav_applications">Aplicaciones</a></li>
                 <li><a href="#portafolio" data-translate="nav_portfolio">Portafolio</a></li>
                 <li><a href="#contacto" data-translate="nav_contact">Contacto</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3 data-translate="footer_products_title">Soluciones</h3>
-            <ul>
-                <li><a href="#soluciones" data-translate="footer_product1">Nano-Zeo</a></li>
             </ul>
         </div>
 
