@@ -143,6 +143,34 @@
             50% { transform: scale(1.05); }
         }
 
+        @media (max-width: 968px) {
+            footer {
+                padding: 2.5rem 1.5rem 1.5rem;
+                margin-top: 3rem;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .footer-bottom {
+                padding-top: 1.5rem;
+            }
+
+            .footer-bottom p {
+                font-size: 0.9rem;
+            }
+
+            .footer-credit {
+                font-size: 0.8rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .floating-buttons {
                 bottom: 20px;
@@ -152,6 +180,38 @@
             .floating-btn {
                 width: 50px;
                 height: 50px;
+            }
+        }
+
+        @media (max-width: 580px) {
+            footer {
+                padding: 2rem 1.25rem 1.25rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-section ul {
+                padding: 0;
+            }
+
+            .footer-bottom p {
+                font-size: 0.85rem;
+                line-height: 1.6;
+            }
+
+            .footer-credit {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -194,8 +254,7 @@
         <div class="footer-section">
             <h3 data-translate="footer_products_title">Soluciones</h3>
             <ul>
-                <li><a href="#soluciones">Nano-Zeo</a></li>
-                <li><a href="#soluciones">Nano-Zeo Ag</a></li>
+                <li><a href="#soluciones" data-translate="footer_product1">Nano-Zeo</a></li>
             </ul>
         </div>
 
